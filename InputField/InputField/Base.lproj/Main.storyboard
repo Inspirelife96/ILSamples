@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MRL-lD-d4F">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--今日谜题-->
+        <scene sceneID="WLo-12-GQo">
+            <objects>
+                <navigationController id="MRL-lD-d4F" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="今日谜题" image="tab_today" id="1wi-7P-rWR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F8a-Gr-yf7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mx7-EC-hBb" kind="relationship" relationship="rootViewController" id="sz8-Gh-FSG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f13-me-MDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54" y="389"/>
+        </scene>
+        <!--今日的努力-->
+        <scene sceneID="hmy-iA-slc">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" automaticallyAdjustsScrollViewInsets="NO" id="Mx7-EC-hBb" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9nd-Cc-539"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mex-88-E2B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bK1-1F-smz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ef-6j-mdU">
+                                <rect key="frame" x="0.0" y="64" width="600" height="490"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3a-Le-OLj">
+                                <rect key="frame" x="0.0" y="554" width="600" height="46"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3nC-1d-kOA">
+                                        <rect key="frame" x="10" y="8" width="522" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tq-7E-rRM">
+                                        <rect key="frame" x="540" y="8" width="50" height="30"/>
+                                        <color key="backgroundColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="eIm-cS-Cqg"/>
+                                            <constraint firstAttribute="height" constant="30" id="h8O-eg-WXU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <state key="normal" title="发送"/>
+                                        <connections>
+                                            <action selector="clickSendButton:" destination="Mx7-EC-hBb" eventType="touchUpInside" id="bdP-HJ-ZAs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.68888300660000001" green="0.71366006140000005" blue="0.73448425530000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="3nC-1d-kOA" firstAttribute="top" secondItem="H3a-Le-OLj" secondAttribute="top" constant="8" id="0EQ-yw-Phf"/>
+                                    <constraint firstItem="0tq-7E-rRM" firstAttribute="top" secondItem="H3a-Le-OLj" secondAttribute="top" constant="8" id="2uC-7G-vtl"/>
+                                    <constraint firstAttribute="height" constant="46" id="Agj-8u-49D"/>
+                                    <constraint firstAttribute="bottom" secondItem="0tq-7E-rRM" secondAttribute="bottom" constant="8" id="H8m-Mr-OAx"/>
+                                    <constraint firstAttribute="trailing" secondItem="0tq-7E-rRM" secondAttribute="trailing" constant="10" id="Ndc-Zp-beh"/>
+                                    <constraint firstItem="0tq-7E-rRM" firstAttribute="leading" secondItem="3nC-1d-kOA" secondAttribute="trailing" constant="8" id="SRs-vu-g67"/>
+                                    <constraint firstItem="0tq-7E-rRM" firstAttribute="leading" secondItem="3nC-1d-kOA" secondAttribute="trailing" constant="8" id="USu-Be-dxi"/>
+                                    <constraint firstItem="3nC-1d-kOA" firstAttribute="leading" secondItem="H3a-Le-OLj" secondAttribute="leading" constant="10" id="XeY-sp-QwR"/>
+                                    <constraint firstAttribute="bottom" secondItem="3nC-1d-kOA" secondAttribute="bottom" constant="8" id="pPl-jI-p2v"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="H8m-Mr-OAx"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Ef-6j-mdU" secondAttribute="trailing" constant="-20" id="0cS-L2-ZtX"/>
+                            <constraint firstItem="H3a-Le-OLj" firstAttribute="top" secondItem="4Ef-6j-mdU" secondAttribute="bottom" id="3Im-3H-OQ0"/>
+                            <constraint firstItem="4Ef-6j-mdU" firstAttribute="top" secondItem="9nd-Cc-539" secondAttribute="bottom" id="CtP-ok-4AV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H3a-Le-OLj" secondAttribute="trailing" constant="-20" id="dn1-fO-3XG"/>
+                            <constraint firstItem="H3a-Le-OLj" firstAttribute="top" secondItem="4Ef-6j-mdU" secondAttribute="bottom" id="fbJ-gm-uvY"/>
+                            <constraint firstItem="H3a-Le-OLj" firstAttribute="leading" secondItem="bK1-1F-smz" secondAttribute="leadingMargin" constant="-20" id="oA8-DB-G7G"/>
+                            <constraint firstItem="Mex-88-E2B" firstAttribute="top" secondItem="H3a-Le-OLj" secondAttribute="bottom" id="yzv-rs-V3d"/>
+                            <constraint firstItem="4Ef-6j-mdU" firstAttribute="leading" secondItem="bK1-1F-smz" secondAttribute="leadingMargin" constant="-20" id="z2f-P1-jbg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="今日的努力" id="7QO-0f-7el"/>
+                    <connections>
+                        <outlet property="inputTextView" destination="3nC-1d-kOA" id="wao-DF-XZ9"/>
+                        <outlet property="inputViewButtom" destination="yzv-rs-V3d" id="v28-vk-J8E"/>
+                        <outlet property="inputViewHeight" destination="Agj-8u-49D" id="dOc-du-x0H"/>
+                        <outlet property="puzzleTableView" destination="4Ef-6j-mdU" id="SJK-L8-wzo"/>
+                        <outlet property="sendButton" destination="0tq-7E-rRM" id="erq-na-UBV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x11-hc-Mo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="1129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_today" width="22" height="21"/>
+    </resources>
+</document>
